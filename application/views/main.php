@@ -11,7 +11,8 @@
 </head>
 <body>
   <div id="wrapper">
-
+  <div class="row">
+  <div class="span9">
   <div id="search">
 		<form class="form-search">
   		<input type="text" class="input-medium search-query">
@@ -45,17 +46,19 @@
             </div>
           </div>
           </div>
+          <div class="span3">
+          <div id="combined">
+            <h1>Portmanteau</h1>
+            <div class="well">
+            </div>
+          </div>
+          </div>
   </div>
-
+  </div>
+  <div class="span3">
     <div id="notes">
     </div>
 
-    <div id="random">
-      <h1>Random</h1>
-      <div class="well">
-     
-      </div>
-    </div>
 
     <div id="pastSearches">
      <h1>Past Searches</h1>
@@ -67,6 +70,17 @@
       <h1>Domains</h1>
       <div class="well">
       </div>
+    </div>
+  </div>
+  </div>
+    <div class="row">
+      <div class="span6">
+      <div id="random">
+      <h1>Random</h1>
+      <div class="well">
+     
+      </div>
+    </div>
     </div>
 
   </div>
