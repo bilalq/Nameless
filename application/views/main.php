@@ -18,27 +18,34 @@
 		<button type="submit" class="btn">Search</button>
 		</form>
 	</div>
-	
-	<div id="definition">
-	  <h1>Word</h1>
-    <div class="well">
-    Definition: 
+
+  <div class="row">
+    <div class="span6">  
+	    <div id="definition">
+	      <h1>Word</h1>
+        <div class="well">
+        Definition: 
+        </div>
+      </div>
     </div>
-
   </div>
-  
-  <div id="synonyms">
-      <h1>Synonyms</h1>
-      <div class="well">
-      </div>
-   </div>
 
-   <div id="rhymes">
-     <h1>Rhymes</h1>
-     <div class="well">
-     
-      </div>
-   </div>
+  <div class="row">
+          <div class="span3">
+          <div id="synonyms">
+          <h1>Synonyms</h1>
+            <div class="well">
+            </div>
+          </div>
+          </div>
+          <div class="span3">
+          <div id="rhymes">
+            <h1>Rhymes</h1>
+            <div class="well">
+            </div>
+          </div>
+          </div>
+  </div>
 
     <div id="notes">
     </div>
