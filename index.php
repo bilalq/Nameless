@@ -12,28 +12,54 @@
 <body>
   <div id="wrapper">
 
-    <div id="search">
+  <div id="search">
+		<form class="form-search">
+  		<input type="text" class="input-medium search-query">
+		<button type="submit" class="btn">Search</button>
+		</form>
+	</div>
+	
+	<div id="definition">
+	  <h1>Word</h1>
+    <div class="well">
+    Definition: 
     </div>
 
-    <div id="definition">
-    </div>
+  </div>
+  
+  <div id="synonyms">
+      <h1>Synonyms</h1>
+      <div class="well">
+      </div>
+   </div>
 
-    <div id="synonyms">
-    </div>
-
-    <div id="rhymes">
-    </div>
+   <div id="rhymes">
+     <h1>Rhymes</h1>
+     <div class="well">
+     
+      </div>
+   </div>
 
     <div id="notes">
     </div>
 
     <div id="random">
+      <h1>Random</h1>
+      <div class="well">
+     
+      </div>
     </div>
 
     <div id="pastSearches">
+     <h1>Past Searches</h1>
+      <div class="well">
+      </div>
     </div>
 
     <div id="domains">
+      <h1>Domains</h1>
+      <div class="well">
+      </div>
     </div>
 
   </div>
