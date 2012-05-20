@@ -10,10 +10,16 @@ $(document).ready(function(){
     $.ajax({
       type: 'GET',
       dataType: 'jsonp',
-      jsonp:'jsonp',
+      jsonp: 'jsonp',
       url: (portURL + word),
       success: function(response){
-       console.log("port: " + response);
+        var port = '';
+        for(var i = 0; i < response.length && i < 15; i++){
+          var parsePort = response[i].combined.split(',')[0];
+          port+= '<p>' + parsePort + '</p>';
+          }
+        $('div#combined div').html(port);
+      console.log("port: " + JSON.stringify(response));
       }
     });
 
@@ -24,11 +30,13 @@ $(document).ready(function(){
       url: (rhymeURL + word),
       success: function(response){
        var rhymes = '';
-       for (var i = 0; i < response.length; i++) {
-         rhymes+='<a href="#" class="validWord">'+response[i].word+'</a>';
+       for (var i = 0; i < response.length && i < 15; i++) {
+         if(response[i].score > 260){
+          rhymes+='<a href="#" class="validWord">'+response[i].word+'</a>';
+          }
        };
        console.log("rhyme: " + rhymes);
-
+        $('div#rhymes div').html(rhymes);
       }
     });
   });
