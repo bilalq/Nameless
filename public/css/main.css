@@ -1,11 +1,18 @@
 h1 {
   font-size: 22px;
 }
+body {
+  background-color: #99CCFF;
+}
 
 #wrapper {
   margin: auto;
   padding-left: 40px;
   padding-top: 40px;
+}
+
+.well{
+  background-color: #CCFFFF;
 }
 
 a.validWord {

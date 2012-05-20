@@ -7,6 +7,7 @@ $(document).ready(function(){
     event.preventDefault();
     var word = $('form#wordForm input').val();
     
+      $('div#definition h1').html(word);
     if(isUnique(word)){
       $('div#pastSearches div').append('<a href="#" class="validWord">' + word + '</a>'); 
       }
@@ -19,7 +20,7 @@ $(document).ready(function(){
       url: (portURL + word),
       success: function(response){
         var port = '';
-        for(var i = 0; i < response.length && i < 15; i++){
+        for(var i = 0; i < response.length && i < 12; i++){
           var parsePort = response[i].combined.split(',')[0];
           port+= '<p>' + parsePort + '</p>';
           }
@@ -36,7 +37,7 @@ $(document).ready(function(){
       url: (rhymeURL + word),
       success: function(response){
        var rhymes = '';
-       for (var i = 0; i < response.length && i < 15; i++) {
+       for (var i = 0; i < response.length && i < 12; i++) {
          if(response[i].score > 260){
           rhymes+='<a href="#" class="validWord">'+response[i].word+'</a>';
           }
