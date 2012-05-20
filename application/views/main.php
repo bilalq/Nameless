@@ -20,7 +20,8 @@
 		</form>
   </div>
   </div>
-  
+</div>
+
   <div class="row">
     <div class="span6">  
 	    <div id="definition">
@@ -31,7 +32,15 @@
       </div>
     </div>
     
-    <div class="span3 offset3">
+  <div class="span3">
+    <div id="pastSearches">
+      <h1>Past Searches</h1>
+        <div class="well">
+        </div>
+    </div>
+  </div>
+
+    <div class="span3">
       <h1>Notes</h1>
       <textarea name="notes" rows=5></textarea>
     </div>
@@ -73,15 +82,7 @@
   </div>
 
  <div class="row">
-  <div class="span6">
-    <div id="pastSearches">
-      <h1>Past Searches</h1>
-        <div class="well">
-        </div>
-    </div>
-  </div>
-
-  <div class="span3 offset3">
+  <div class="span3 offset9">
       <div id="random">
       <h1>Random</h1>
         <div class="well">
