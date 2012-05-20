@@ -14,9 +14,9 @@
   <div class="row">
   <div class="span9">
   <div id="search">
-		<form class="form-search">
-  		<input type="text" class="input-medium search-query">
-		<button type="submit" class="btn"><i class="icon-search"></i></button>
+		<form id="wordForm" class="form-search">
+  		<input type="text" class="input-medium search-query" />
+		<a href="#" type="submit" class="btn"><i class="icon-search"></i></a>
 		</form>
 	</div>
 
