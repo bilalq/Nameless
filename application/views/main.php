@@ -18,8 +18,9 @@
   		<input type="text" class="input-medium search-query" />
 		<a href="#" type="submit" class="btn"><i class="icon-search"></i></a>
 		</form>
-	</div>
-
+  </div>
+  </div>
+  
   <div class="row">
     <div class="span6">  
 	    <div id="definition">
@@ -29,59 +30,64 @@
         </div>
       </div>
     </div>
+    
+    <div class="span3 offset3">
+      <h1>Notes</h1>
+      <input type="textarea" rows=20 cols=10>
+    </div>
   </div>
 
   <div class="row">
-          <div class="span3">
-          <div id="synonyms">
-          <h1>Synonyms</h1>
-            <div class="well">
-            </div>
-          </div>
-          </div>
-          <div class="span3">
-          <div id="rhymes">
-            <h1>Rhymes</h1>
-            <div class="well">
-            </div>
-          </div>
-          </div>
-          <div class="span3">
-          <div id="combined">
-            <h1>Portmanteau</h1>
-            <div class="well">
-            </div>
-          </div>
-          </div>
-  </div>
-  </div>
-  <div class="span3">
-    <div id="notes">
+    <div class="span3"> 
+      <div id="synonyms">
+        <h1>Synonyms</h1>
+        <div class="well">
+        </div>
+      </div>
     </div>
 
+    <div class="span3">
+       <div id="rhymes">
+         <h1>Rhymes</h1>
+            <div class="well">
+            </div>
+        </div>
+    </div>
 
+    <div class="span3">
+      <div id="combined">
+         <h1>Portmanteau</h1>
+            <div class="well">
+            </div>
+      </div>
+    </div>
+
+    <div class="span3">      
+      <div id="domains">
+        <h1>Domains</h1>
+          <div class="well">
+          </div>
+      </div>
+    </div>
+ 
+  </div>
+
+ <div class="row">
+  <div class="span6">
     <div id="pastSearches">
-     <h1>Past Searches</h1>
-      <div class="well">
-      </div>
+      <h1>Past Searches</h1>
+        <div class="well">
+        </div>
     </div>
+  </div>
 
-    <div id="domains">
-      <h1>Domains</h1>
-      <div class="well">
-      </div>
-    </div>
-  </div>
-  </div>
-    <div class="row">
-      <div class="span6">
+  <div class="span3 offset3">
       <div id="random">
       <h1>Random</h1>
-      <div class="well">
-     
+        <div class="well">
+        </div>
       </div>
-    </div>
-    </div>
+  </div>
 
   </div>
 </body>
