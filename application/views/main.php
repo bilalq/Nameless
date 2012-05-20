@@ -56,7 +56,7 @@
 
     <div class="span3">
       <div id="combined">
-         <h1>Portmanteau</h1>
+         <h1>Portmanteaus</h1>
             <div class="well">
             </div>
       </div>

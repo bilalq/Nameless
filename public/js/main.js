@@ -57,7 +57,7 @@ $(document).ready(function(){
 
         for (var i = 0; i < defs.length; i++) {
           var curr = defs[i];
-          entries += '<small>'+curr.partOfSpeech+'</small><p>'+curr.text+'</p>'; 
+          entries += '<small>'+curr.partOfSpeech+'</small><p class="def">'+curr.text+'</p>'; 
         }
 
         $('div#definition div').html(entries);

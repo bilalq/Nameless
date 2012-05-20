@@ -21,3 +21,13 @@ textarea {
   /*height: 120px;*/
   overflow-y: scroll;
 }
+
+small {
+  font-size: 10px;
+  font-style: italic;
+}
+
+p.def {
+  padding-left: 8px;
+  font-size: 12px;
+}
