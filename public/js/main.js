@@ -11,6 +11,7 @@ $(document).ready(function(){
       $('div#pastSearches div').append('<a href="#" class="validWord">' + word + '</a>'); 
       }
 
+    //Portmanteau Collection
     $.ajax({
       type: 'GET',
       dataType: 'jsonp',
@@ -23,10 +24,11 @@ $(document).ready(function(){
           port+= '<p>' + parsePort + '</p>';
           }
         $('div#combined div').html(port);
-      console.log("port: " + JSON.stringify(response));
+      //console.log("port: " + JSON.stringify(response));
       }
     });
 
+    //Rhyme Collection
     $.ajax({
       type: 'GET',
       dataType: 'jsonp',
@@ -39,10 +41,21 @@ $(document).ready(function(){
           rhymes+='<a href="#" class="validWord">'+response[i].word+'</a>';
           }
        };
-       console.log("rhyme: " + rhymes);
+       //console.log("rhyme: " + rhymes);
         $('div#rhymes div').html(rhymes);
       }
     });
+
+    //Definition Collection
+    $.ajax({
+      type: 'GET',
+      data: {'word': word},
+      url: 'wordinfo/getDef',
+      success: function(response){
+        console.log('DEFINITION: ' + JSON.stringify(response));
+      }
+    });
+      
   });
 
   function isUnique(target) {

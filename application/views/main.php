@@ -16,7 +16,7 @@
   <div id="search">
 		<form id="wordForm" class="form-search">
   		<input type="text" class="input-medium search-query" />
-		<a href="#" type="submit" class="btn"><i class="icon-search"></i></a>
+		<button href="#" type="submit" class="btn"><i class="icon-search"></i></button>
 		</form>
   </div>
   </div>
@@ -33,7 +33,7 @@
     
     <div class="span3 offset3">
       <h1>Notes</h1>
-      <textarea name="notes" rows=8 cols=10></textarea>
+      <textarea name="notes" rows=5></textarea>
     </div>
   </div>
 
