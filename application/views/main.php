@@ -31,7 +31,6 @@
           <div id="definition">
             <h1>Word</h1>
             <div class="well">
-              Definition: 
             </div>
           </div>
         </div>
