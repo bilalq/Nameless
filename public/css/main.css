@@ -8,3 +8,7 @@ h1 {
   padding-top: 40px;
 }
 
+a.validWord {
+  display: block;
+}
+
