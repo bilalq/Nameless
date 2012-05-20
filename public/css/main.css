@@ -35,6 +35,7 @@ div#pastSearches a.validWord {
 textarea {
   /*height: 120px;*/
   overflow-y: scroll;
+  background-color: #ccffff;
 }
 
 small {
@@ -49,4 +50,9 @@ p.def {
 
 form {
   margin-bottom: 0;
+}
+
+.navbar a.brand {
+  font-weight: 500;
+  color: #ffffff;
 }

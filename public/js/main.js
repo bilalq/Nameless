@@ -6,7 +6,6 @@ $(document).ready(function(){
 
   wordForm.submit(function(e){
     e.preventDefault();
-    //event.preventDefault();
     var word = formInput.val();
       $('div#definition h1').html(word);
     if(isUnique(word)){
@@ -54,6 +53,7 @@ $(document).ready(function(){
       data: {'word': word},
       url: 'index.php/wordinfo/getDef',
       success: function(response){
+        console.log(response);
         var defs = JSON.parse(response);
         var entries = '';
 
@@ -72,7 +72,13 @@ $(document).ready(function(){
       data: {'word': word},
       url: 'index.php/wordinfo/getSyns',
       success: function(response){
-        var syns = JSON.parse(response)[0].words;
+       
+        var syns = JSON.parse(response);
+        if (syns.length < 1) {
+          $('div#synonyms div').html('');
+          return;
+        }
+        syns = syns[0].words;
         var entries = '';
 
         for (var i = 0; i < syns.length; i++) {
@@ -84,6 +90,7 @@ $(document).ready(function(){
       }
     });
 
+    //Random Word
     $.ajax({
       type: 'GET',
       data: {'word': word},
@@ -94,6 +101,7 @@ $(document).ready(function(){
       }
     });
 
+    //Domain Search
     $.ajax({
       type: 'GET',
       data: {'word': word},
@@ -114,7 +122,6 @@ $(document).ready(function(){
 
   $('div#wrapper').on('click', 'a.validWord', function(e){
     e.preventDefault();
-    //event.preventDefault();
     var searchTerm = $(this).text();
     formInput.val(searchTerm);
     wordForm.submit();
