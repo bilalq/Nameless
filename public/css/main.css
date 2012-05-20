@@ -20,7 +20,7 @@ a.validWord {
 }
 
 div#pastSearches a.validWord {
-  display: inline;
+  display: inline-block;
   padding-right: 5px; 
 }
 

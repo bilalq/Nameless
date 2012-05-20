@@ -2,15 +2,15 @@ $(document).ready(function(){
   var wordForm = $('form#wordForm');
   var rhymeURL = "http://rhymebrain.com/talk?function=getRhymes&maxResults=45&word=";
   var portURL = "http://rhymebrain.com/talk?function=getPortmanteaus&lang=en&maxResults=12&word=";
+  var formInput = $('form#wordForm input');
 
   wordForm.submit(function(){
     event.preventDefault();
-    var word = $('form#wordForm input').val();
-    
+    var word = formInput.val();
       $('div#definition h1').html(word);
     if(isUnique(word)){
       $('div#pastSearches div').append('<a href="#" class="validWord">' + word + '</a>'); 
-      }
+    }
 
     //Portmanteau Collection
     $.ajax({
@@ -84,6 +84,15 @@ $(document).ready(function(){
     });
   });
 
+  $('div#wrapper').on('click', 'a.validWord', function(e){
+    e.preventDefault();
+    var searchTerm = $(this).text();
+    
+    formInput.val(searchTerm);
+    
+    wordForm.submit();
+  });
+
   function isUnique(target) {
     var entries = $('div#pastSearches div').html();
     if(entries.indexOf(target) != -1){
@@ -94,6 +103,4 @@ $(document).ready(function(){
   }
 
 }); //end docReady
-
-
 
