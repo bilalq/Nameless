@@ -1,5 +1,13 @@
+div.container {
+  margin-left: 15px;
+}
+
 h1 {
-  font-size: 22px;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
 }
 body {
   background-color: #99CCFF;
@@ -8,7 +16,7 @@ body {
 #wrapper {
   margin: auto;
   padding-left: 40px;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .well{
@@ -37,4 +45,8 @@ small {
 p.def {
   padding-left: 8px;
   font-size: 12px;
+}
+
+form {
+  margin-bottom: 0;
 }
