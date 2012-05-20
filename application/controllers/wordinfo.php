@@ -19,6 +19,14 @@ class Wordinfo extends CI_Controller {
     echo $synonyms;
   }
 
+  public function getRand()
+  {
+    $WORDNIK_KEY = $this->config->item('wordnik_key');
+    $randURL = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&minLength=3&api_key=".$WORDNIK_KEY;
+    $randomWord = file_get_contents($randURL);
+    echo $randomWord;
+  }
+
   public function getDomains($word)
   {
 

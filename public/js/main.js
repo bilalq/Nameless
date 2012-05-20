@@ -82,17 +82,26 @@ $(document).ready(function(){
         $('div#synonyms div').html(entries);
       }
     });
+
+    $.ajax({
+      type: 'GET',
+      data: {'word': word},
+      url: 'index.php/wordinfo/getRand',
+      success: function(response){
+        var randomWord = JSON.parse(response).word;
+        $('div#random div').html('<a href="#" class="validWord">'+randomWord+'</a>');
+      }
+    });
   });
 
   $('div#wrapper').on('click', 'a.validWord', function(e){
     e.preventDefault();
     var searchTerm = $(this).text();
-    
     formInput.val(searchTerm);
-    
     wordForm.submit();
   });
 
+  //Checks for unique entries in past searches
   function isUnique(target) {
     var entries = $('div#pastSearches div').html();
     if(entries.indexOf(target) != -1){
