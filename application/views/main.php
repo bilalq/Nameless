@@ -20,6 +20,7 @@
               <button href="#" type="submit" class="btn"><i class="icon-search"></i></button>
             </form>
           </div>
+          <!--<a href="#" id="save" class="pull-right btn btn-success">Save</a>-->
         </div>
       </div>
     </div>

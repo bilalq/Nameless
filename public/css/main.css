@@ -56,3 +56,9 @@ form {
   font-weight: 500;
   color: #ffffff;
 }
+
+.navbar a#save {
+  position: fixed;
+  top: 2px;
+  right: 20px;
+}
