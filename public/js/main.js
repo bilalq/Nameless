@@ -52,7 +52,15 @@ $(document).ready(function(){
       data: {'word': word},
       url: 'index.php/wordinfo/getDef',
       success: function(response){
-        console.log('DEFINITION: ' + (response));
+        var defs = JSON.parse(response);
+        var entries = '';
+
+        for (var i = 0; i < defs.length; i++) {
+          var curr = defs[i];
+          entries += '<small>'+curr.partOfSpeech+'</small><p>'+curr.text+'</p>'; 
+        }
+
+        $('div#definition div').html(entries);
       }
     });
 
@@ -62,7 +70,15 @@ $(document).ready(function(){
       data: {'word': word},
       url: 'index.php/wordinfo/getSyns',
       success: function(response){
-        console.log('Synonyms: ' + (response));
+        var syns = JSON.parse(response)[0].words;
+        var entries = '';
+
+        for (var i = 0; i < syns.length; i++) {
+          var curr = syns[i];
+          entries += '<a href="#" class="validWord">'+curr+'</a>'; 
+        }
+
+        $('div#synonyms div').html(entries);
       }
     });
   });
