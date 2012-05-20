@@ -14,7 +14,7 @@ class Wordinfo extends CI_Controller {
   {
     $WORDNIK_KEY = $this->config->item('wordnik_key');
     $word = $this->input->get('word');
-    $synURL = "http://api.wordnik.com//v4/".$word.".json/word/related?limit=15&type=synonym&api_key=".$WORDNIK_KEY;
+    $synURL = "http://api.wordnik.com/v4/word.json/".$word."/related?limit=12&type=synonym&api_key=".$WORDNIK_KEY;
     $synonyms = file_get_contents($synURL);
     echo $synonyms;
   }
