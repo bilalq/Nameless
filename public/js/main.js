@@ -13,7 +13,7 @@ $(document).ready(function(){
       jsonp:'jsonp',
       url: (portURL + word),
       success: function(response){
-       console.log(response);
+       console.log("port: " + response);
       }
     });
 
