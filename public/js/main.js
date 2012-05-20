@@ -4,8 +4,9 @@ $(document).ready(function(){
   var portURL = "http://rhymebrain.com/talk?function=getPortmanteaus&lang=en&maxResults=12&word=";
   var formInput = $('form#wordForm input');
 
-  wordForm.submit(function(){
-    event.preventDefault();
+  wordForm.submit(function(e){
+    e.preventDefault();
+    //event.preventDefault();
     var word = formInput.val();
       $('div#definition h1').html(word);
     if(isUnique(word)){
@@ -96,6 +97,7 @@ $(document).ready(function(){
 
   $('div#wrapper').on('click', 'a.validWord', function(e){
     e.preventDefault();
+    //event.preventDefault();
     var searchTerm = $(this).text();
     formInput.val(searchTerm);
     wordForm.submit();
