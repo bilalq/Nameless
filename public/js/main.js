@@ -23,7 +23,7 @@ $(document).ready(function(){
         var port = '';
         for(var i = 0; i < response.length && i < 12; i++){
           var parsePort = response[i].combined.split(',')[0];
-          port+= '<p>' + parsePort + '</p>';
+          port+= '<a href="#" class="validWord">' + parsePort + '</a>';
           }
         $('div#combined div').html(port);
       //console.log("port: " + JSON.stringify(response));
@@ -91,6 +91,23 @@ $(document).ready(function(){
       success: function(response){
         var randomWord = JSON.parse(response).word;
         $('div#random div').html('<a href="#" class="validWord">'+randomWord+'</a>');
+      }
+    });
+
+    $.ajax({
+      type: 'GET',
+      data: {'word': word},
+      url: 'index.php/wordinfo/getDomains',
+      success: function(response){
+        var domains = JSON.parse(response).results;
+        var available = '';
+        for (var i = 0; i < domains.length; i++) {
+          var curr = domains[i];
+          if (curr.availability === "available") {
+            available+= '<p>'+curr.domain+'</p>';
+          }
+        }
+        $('div#domains div').html(available);
       }
     });
   });
