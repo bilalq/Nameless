@@ -12,3 +12,7 @@ a.validWord {
   display: block;
 }
 
+div#pastSearches a.validWord {
+  display: inline;
+  padding-right: 5px; 
+}

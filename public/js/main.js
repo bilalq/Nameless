@@ -6,6 +6,10 @@ $(document).ready(function(){
   wordForm.submit(function(){
     event.preventDefault();
     var word = $('form#wordForm input').val();
+    
+    if(isUnique(word)){
+      $('div#pastSearches div').append('<a href="#" class="validWord">' + word + '</a>'); 
+      }
 
     $.ajax({
       type: 'GET',
@@ -41,5 +45,16 @@ $(document).ready(function(){
     });
   });
 
+  function isUnique(target) {
+    var entries = $('div#pastSearches div').html();
+    if(entries.indexOf(target) != -1){
+      return false;
+    }else{
+      return true;
+    }
+  }
+
 }); //end docReady
+
+
 
