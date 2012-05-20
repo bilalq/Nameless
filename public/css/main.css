@@ -16,3 +16,8 @@ div#pastSearches a.validWord {
   display: inline;
   padding-right: 5px; 
 }
+
+textarea {
+  /*height: 120px;*/
+  overflow-y: scroll;
+}

@@ -33,7 +33,7 @@
     
     <div class="span3 offset3">
       <h1>Notes</h1>
-      <input type="textarea" rows=20 cols=10>
+      <textarea name="notes" rows=8 cols=10></textarea>
     </div>
   </div>
 
