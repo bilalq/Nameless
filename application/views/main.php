@@ -5,8 +5,8 @@
   <script type="text/javascript" src="<? echo base_url(); ?>public/js/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="<? echo base_url(); ?>public/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<? echo base_url(); ?>public/js/main.js"></script>
-  <link rel="stylesheet" href="<? echo base_url(); ?>public/css/main.css" type="text/css" charset="utf-8">
   <link rel="stylesheet" href="<? echo base_url(); ?>public/css/bootstrap.min.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="<? echo base_url(); ?>public/css/main.css" type="text/css" charset="utf-8">
   <title>No Name</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
   <div id="search">
 		<form class="form-search">
   		<input type="text" class="input-medium search-query">
-		<button type="submit" class="btn">Search</button>
+		<button type="submit" class="btn"><i class="icon-search"></i></button>
 		</form>
 	</div>
 
