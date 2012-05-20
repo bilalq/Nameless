@@ -51,12 +51,21 @@ $(document).ready(function(){
     $.ajax({
       type: 'GET',
       data: {'word': word},
-      url: 'wordinfo/getDef',
+      url: 'index.php/wordinfo/getDef',
       success: function(response){
-        console.log('DEFINITION: ' + JSON.stringify(response));
+        console.log('DEFINITION: ' + (response));
       }
     });
-      
+
+    //Thesaurus Collection
+    $.ajax({
+      type: 'GET',
+      data: {'word': word},
+      url: 'index.php/wordinfo/getSyns',
+      success: function(response){
+        console.log('Synonyms: ' + (response));
+      }
+    });
   });
 
   function isUnique(target) {
