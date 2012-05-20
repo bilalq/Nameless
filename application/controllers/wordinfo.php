@@ -10,8 +10,7 @@ class Wordinfo extends CI_Controller {
     echo json_encode($definitions);
   }
 
-  public function getSyns()
-  {
+  public function getSyns() {
     $WORDNIK_KEY = $this->config->item('wordnik_key');
     $word = $this->input->get('word');
     $synURL = "http://api.wordnik.com/v4/word.json/".$word."/related?limit=12&type=synonym&api_key=".$WORDNIK_KEY;
@@ -19,17 +18,17 @@ class Wordinfo extends CI_Controller {
     echo $synonyms;
   }
 
-  public function getRand()
-  {
+  public function getRand() {
     $WORDNIK_KEY = $this->config->item('wordnik_key');
     $randURL = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&minLength=3&api_key=".$WORDNIK_KEY;
     $randomWord = file_get_contents($randURL);
     echo $randomWord;
   }
 
-  public function getDomains($word)
-  {
-
+  public function getDomains() {
+    $word = $this->input->get('word');
+    $domains = file_get_contents("http://domai.nr/api/json/search?q=".$word);
+    echo $domains;
   }
 }
 
