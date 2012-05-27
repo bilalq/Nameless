@@ -40,6 +40,7 @@
 
 $route['default_controller'] = 'welcome';
 $route['welcome'] = 'welcome';
+$route['landing'] = 'landing';
 $route['404_override'] = '';
 
 
