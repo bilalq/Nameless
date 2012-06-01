@@ -4,6 +4,8 @@ $(document).ready(function(){
   var portURL = "http://rhymebrain.com/talk?function=getPortmanteaus&lang=en&maxResults=12&word=";
   var formInput = $('form#wordForm input');
 
+  var pathName = window.location.hash.replace('#','');
+
   wordForm.submit(function(e){
     e.preventDefault();
     var word = formInput.val();
@@ -118,7 +120,12 @@ $(document).ready(function(){
         $('div#domains div').html(available);
       }
     });
-  });
+  }); //end submit definition
+
+  if (pathName !== undefined && pathName !== null && pathName !== ''){
+    formInput.val(pathName);
+    wordForm.submit();
+  };
 
   $('div#wrapper').on('click', 'a.validWord', function(e){
     e.preventDefault();
