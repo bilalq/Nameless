@@ -13,6 +13,9 @@ h2 {
 body {
   /*background-color: #99CCFF;*/
   background: url('/img/wild_oliva.png');
+  background-size: 198px 200px;
+  background-position: initial initial;
+  background-repeat: initial initial;
 }
 
 h1, h2, h3, h4, h5, h6 {
