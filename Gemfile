@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'guard'
+gem 'guard-livereload'
+gem 'guard-phpunit'
+gem 'guard-concat'
+gem 'jsmin'
+gem 'cssmin'
+gem 'guard-sass'
+gem 'guard-coffeescript'
+gem 'zurb-foundation'
