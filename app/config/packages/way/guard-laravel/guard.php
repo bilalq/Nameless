@@ -61,10 +61,10 @@ return array(
 	|
 	*/
   'js_concat' => array(
-    'vendor/jquery',
-    'vendor/foundation',
-    'vendor/underscore',
-    'vendor/backbone',
+    'libs/jquery',
+    'libs/foundation',
+    'libs/underscore',
+    'libs/backbone',
     'app'
   ),
 
