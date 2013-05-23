@@ -6,3 +6,5 @@ composer.lock
 logs/access_log
 logs/error_log
 .sass-cache
+Guardfile
+*.map

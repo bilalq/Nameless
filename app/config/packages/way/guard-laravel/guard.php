@@ -101,12 +101,15 @@ return array(
 	*/
 	'guard_options' => array(
 
-    'coffee' => array(
+    'coffeescript' => array(
       'all_on_start'  => true,
-      'source_map'    => true
+      'source_map'    => true,
+      'error_to_js'   => true
+
     ),
 
     'sass' => array(
+      'all_on_start'  => true,
       'line_numbers'  => true,
       'style'		      => ':compressed'
     )
