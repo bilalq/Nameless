@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/neerolyte/guard-phpunit.git
+  revision: c416f0b96d1b1f336a7e4da0aab5339e3601220d
+  submodules: true
+  specs:
+    guard-phpunit (0.1.4)
+      guard (~> 1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,8 +38,6 @@ GEM
       em-websocket (>= 0.5.0)
       guard (>= 1.8.0)
       multi_json (~> 1.7)
-    guard-phpunit (0.1.4)
-      guard (~> 1.1)
     guard-sass (1.1.0)
       guard (>= 1.1.0)
       sass (>= 3.1)
@@ -69,7 +75,7 @@ DEPENDENCIES
   guard-coffeescript
   guard-concat
   guard-livereload
-  guard-phpunit
+  guard-phpunit!
   guard-sass
   jsmin
   json (~> 1.7.7)

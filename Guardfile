@@ -1,8 +1,8 @@
 guard :coffeescript, :input => "app/assets/coffee", :output => "public/js"
 
-guard :concat, :type => "css", :files => %w[], :input_dir => "public/css", :output => "public/css/styles.min"
+guard :concat, :type => "css", :files => %w[app], :input_dir => "public/css", :output => "public/css/styles.min"
 
-guard :concat, :type => "js", :files => %w[], :input_dir => "public/js", :output => "public/js/scripts.min"
+guard :concat, :type => "js", :files => %w[vendor/jquery vendor/foundation vendor/underscore vendor/backbone app], :input_dir => "public/js", :output => "public/js/scripts.min"
 
 # Refresh the browser on save
 guard 'livereload' do
@@ -61,4 +61,4 @@ guard :refresher do
   end
 end
 
-guard :sass, :input => 'app/assets/sass', :output => 'public/css'
+guard :sass, :input => 'app/assets/sass', :output => 'public/css', :line_numbers => true, :style => :compressed

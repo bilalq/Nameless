@@ -60,7 +60,13 @@ return array(
 	| you'd simply add `array('main')` (the extension may be left off).
 	|
 	*/
-	'js_concat' => Way\Helpers\File::withoutExtensionsFrom('public/js'),
+  'js_concat' => array(
+    'vendor/jquery',
+    'vendor/foundation',
+    'vendor/underscore',
+    'vendor/backbone',
+    'app'
+  ),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -74,7 +80,9 @@ return array(
 	| you'd simply add `array('buttons')` (the extension may be left off).
 	|
 	*/
-	'css_concat' => Way\Helpers\File::withoutExtensionsFrom('public/css'),
+  'css_concat' => array(
+    'app'
+  ),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -92,11 +100,16 @@ return array(
 	|
 	*/
 	'guard_options' => array(
-		/*
-		'sass' => array(
-			'line_numbers' => true,
-			'style'		   => ':compressed'
-		)
-		*/
+
+    'coffee' => array(
+      'all_on_start'  => true,
+      'source_map'    => true
+    ),
+
+    'sass' => array(
+      'line_numbers'  => true,
+      'style'		      => ':compressed'
+    )
+
 	)
 );

@@ -5,3 +5,4 @@ composer.lock
 .DS_Store
 logs/access_log
 logs/error_log
+.sass-cache
